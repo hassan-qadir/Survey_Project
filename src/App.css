@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #181b3a;
+  --secondary-color: #ffffff;
+ --body-bg: rgb(255, 255, 255);
+  --heading-color: #fff;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", sans-serif;
+  background: var(--body-bg);
+  width: 100vw;  
+}
+
+ 
+
+ @keyframes down {
+  0%, 100% {
+   transform: none;
+  }
+ 
+  25% {
+   transform: translateX(100%);
+  }
+ 
+  50% {
+   transform: translateX(100%) translateY(100%);
+  }
+ 
+  75% {
+   transform: translateY(100%);
+  }
+ }
+ 
+ @keyframes up {
+  0%, 100% {
+   transform: none;
+  }
+ 
+  25% {
+   transform: translateX(-100%);
+  }
+ 
+  50% {
+   transform: translateX(-100%) translateY(-100%);
+  }
+ 
+  75% {
+   transform: translateY(-100%);
+  }
+ }
