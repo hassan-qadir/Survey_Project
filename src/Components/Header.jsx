@@ -56,41 +56,42 @@ const Header = () => {
                   <br />
                   {user.email}
                 </div>
-                {/* <hr style={{ width: "15rem" }} /> */}
               </div>
-              <li>
-                <Link class="dropdown-item" to={""}>
-                  Account
-                </Link>
-              </li>
-              <li>
-                <Link class="dropdown-item" to={""}>
-                  Verify
-                </Link>
-              </li>
-              <li>
-                <Link class="dropdown-item" to={""}>
-                  FAQs
-                </Link>
-              </li>
-              <li>
-                <Link class="dropdown-item" to={""}>
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="dropdown-item"
-                  to={"/login"}
-                  onClick={() => {
-                    localStorage.removeItem("loggedIn");
-                    localStorage.removeItem("name");
-                  }}
-                  style={{ cursor: "pointer" }}
-                >
-                  Logout
-                </Link>
-              </li>
+              <div style={{ fontSize: "1rem" }}>
+                <li>
+                  <Link class="dropdown-item" to={""}>
+                    Account
+                  </Link>
+                </li>
+                <li>
+                  <Link class="dropdown-item" to={""}>
+                    Verify
+                  </Link>
+                </li>
+                <li>
+                  <Link class="dropdown-item" to={""}>
+                    FAQs
+                  </Link>
+                </li>
+                <li>
+                  <Link class="dropdown-item" to={""}>
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="dropdown-item"
+                    to={"/login"}
+                    onClick={() => {
+                      localStorage.removeItem("loggedIn");
+                      localStorage.removeItem("name");
+                    }}
+                    style={{ cursor: "pointer" }}
+                  >
+                    Logout
+                  </Link>
+                </li>
+              </div>
             </ul>
           </div>
         </Toolbar>
