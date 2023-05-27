@@ -3,7 +3,7 @@ import AppBar from "@mui/material/AppBar";
 import { Link } from "react-router-dom";
 import { Toolbar } from "@mui/material";
 
-const drawerWidth = 240;
+const drawerWidth = 230;
 const Header = () => {
   const user = JSON.parse(localStorage.getItem("loggedIn"));
   return (
@@ -52,12 +52,14 @@ const Header = () => {
                   />
                 </div>
                 <div className="col-lg-4 " style={{ fontSize: "13px" }}>
-                  <span style={{ fontWeight: "bold" }}>{user.name}</span>
+                  <span style={{ fontWeight: "bold" }}>
+                    {user && user.name}
+                  </span>
                   <br />
-                  {user.email}
+                  {user && user.email}
                 </div>
               </div>
-              <div style={{ fontSize: "1rem" }}>
+              <div style={{ fontSize: "0.8rem" }}>
                 <li>
                   <Link class="dropdown-item" to={""}>
                     Account

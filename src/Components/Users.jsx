@@ -5,59 +5,19 @@ import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Drawer from "@mui/material/Drawer";
-import { Toolbar, ListItem, List, ListItemText } from "@mui/material";
+import { Toolbar } from "@mui/material";
 import Header from "./Header";
+import SideNav from "./SideNav";
 
-const drawerWidth = 240;
+const drawerWidth = 230;
 
 const Users = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const user = JSON.parse(localStorage.getItem("loggedIn"));
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
-  const drawer = (
-    <>
-      <div>
-        <h6
-          className="text-center mt-4"
-          style={{ fontWeight: "bold", color: "rgb(144, 81, 255)" }}
-        >
-          Poll shark
-        </h6>
-        <Toolbar />
-
-        <List>
-          <ListItem>
-            <ListItemText>
-              <ul className="navbar-nav text-center ">
-                <li className="nav-item mb-3">
-                  <Link className="nav-link text-dark" to={"/"}>
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item mb-3">
-                  <Link className="nav-link text-dark" to={"/Survey"}>
-                    Survey
-                  </Link>
-                </li>
-              </ul>
-            </ListItemText>
-          </ListItem>
-        </List>
-      </div>
-      <Toolbar className="bg-light" style={{ marginTop: "380px" }}>
-        <h6 className="text-muted text-center">
-          <small>
-            logged in as :<span> {user.name}</span>
-          </small>
-        </h6>
-      </Toolbar>
-    </>
-  );
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
@@ -87,7 +47,7 @@ const Users = (props) => {
               },
             }}
           >
-            {drawer}
+            {SideNav}
           </Drawer>
           <Drawer
             variant="permanent"
@@ -100,7 +60,7 @@ const Users = (props) => {
             }}
             open
           >
-            {drawer}
+            {SideNav}
           </Drawer>
         </Box>
         <Box component="main">
