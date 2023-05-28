@@ -2,6 +2,9 @@ import React from "react";
 import AppBar from "@mui/material/AppBar";
 import { Link } from "react-router-dom";
 import { Toolbar } from "@mui/material";
+import { AiOutlineUser } from "react-icons/ai";
+import { MdOutlineVerifiedUser } from "react-icons/md";
+import { CiLogin } from "react-icons/ci";
 
 const drawerWidth = 230;
 const Header = () => {
@@ -59,25 +62,25 @@ const Header = () => {
                   {user && user.email}
                 </div>
               </div>
-              <div style={{ fontSize: "0.8rem" }}>
+              <div style={{ fontSize: "0.9rem" }}>
                 <li>
                   <Link class="dropdown-item" to={""}>
-                    Account
+                    <AiOutlineUser /> Account
                   </Link>
                 </li>
                 <li>
                   <Link class="dropdown-item" to={""}>
-                    Verify
+                    <MdOutlineVerifiedUser /> Verify
                   </Link>
                 </li>
                 <li>
                   <Link class="dropdown-item" to={""}>
-                    FAQs
+                    <AiOutlineUser /> FAQs
                   </Link>
                 </li>
                 <li>
                   <Link class="dropdown-item" to={""}>
-                    Contact
+                    <AiOutlineUser /> Contact
                   </Link>
                 </li>
                 <li>
@@ -90,7 +93,7 @@ const Header = () => {
                     }}
                     style={{ cursor: "pointer" }}
                   >
-                    Logout
+                    <CiLogin /> Logout
                   </Link>
                 </li>
               </div>
