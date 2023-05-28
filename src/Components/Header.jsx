@@ -6,7 +6,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import { MdOutlineVerifiedUser } from "react-icons/md";
 import { CiLogin } from "react-icons/ci";
 
-const drawerWidth = 240;
+const drawerWidth = 230;
 const Header = () => {
   const user = JSON.parse(localStorage.getItem("loggedIn"));
   return (
